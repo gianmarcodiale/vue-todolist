@@ -24,11 +24,13 @@ const app = new Vue(
         },
         methods: {
             addTask() {
-                this.toDo.unshift(this.newTask, text)
+                this.toDo.push({text : this.newTask, done: false});
+                this.newTask = '';
+                // console.log(this.toDo);
             },
             removeTask(index) {
                 this.toDo.splice(index, 1)
-            }
+            },
         }
     }
 )
