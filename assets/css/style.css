@@ -11,3 +11,7 @@ body {
     background-color: lightblue;
     padding: 4rem;
 }
+
+.done {
+    text-decoration: line-through;
+}
