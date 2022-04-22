@@ -31,6 +31,9 @@ const app = new Vue(
             removeTask(index) {
                 this.toDo.splice(index, 1)
             },
+            undoTask() {
+                this.toDo.done = true
+            }
         }
     }
 )
