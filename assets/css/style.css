@@ -1,0 +1,13 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: cadetblue;
+}
+
+.logo>img {
+    max-width: 100px;
+}
+
+.to-do {
+    background-color: lightblue;
+    padding: 4rem;
+}
