@@ -15,3 +15,7 @@ body {
 .done {
     text-decoration: line-through;
 }
+
+.message {
+    background-color: lightblue;
+}

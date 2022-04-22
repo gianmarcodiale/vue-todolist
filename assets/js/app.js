@@ -2,7 +2,7 @@ const app = new Vue(
     {
         el: '#app',
         data: {
-            newTask: '',
+            newTask: "",
             toDo: [
                 {
                     text: 'Iscriversi in palestra',
@@ -24,7 +24,10 @@ const app = new Vue(
         },
         methods: {
             addTask() {
-                
+                this.toDo.unshift(this.newTask, text)
+            },
+            removeTask(index) {
+                this.toDo.splice(index, 1)
             }
         }
     }
