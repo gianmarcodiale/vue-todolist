@@ -38,7 +38,10 @@
 
             <section class="to-do d-flex justify-content-center mt-3 w-50 m-auto rounded-3 align-items-center" v-if="toDo.length > 0">
                 <ul class="list-unstyled text-right w-100">
-                    <li class="d-flex justify-content-between" v-for="(item, index) in toDo"><span :class="item.done === true ? 'done' : 'false'" @click="undoTask">{{item.text}}</span><i class="fa-solid fa-times-circle" @click="removeTask(index)"></i></li>
+                    <li class="d-flex justify-content-between" v-for="(item, index) in toDo">
+                        <span :class="item.done ? 'done' : ''" @click="undoTask(index)">{{item.text}}</span>
+                        <i class="fa-solid fa-times-circle" @click="removeTask(index)"></i>
+                    </li>
                 </ul>
             </section>
             <p v-else class="message p-3 w-50 rounded-3 text-center m-auto mt-4">🥳 Yay you have nothing else ToDo!</p>

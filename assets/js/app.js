@@ -31,8 +31,17 @@ const app = new Vue(
             removeTask(index) {
                 this.toDo.splice(index, 1)
             },
-            undoTask() {
-                this.toDo.done = true
+            undoTask(index) {
+                let isDone = this.toDo[index];
+
+                if (isDone.done) {
+                    // set false
+                    isDone.done = false;
+                } else {
+                    // set true
+                    isDone.done = true;
+                }
+                
             }
         }
     }
